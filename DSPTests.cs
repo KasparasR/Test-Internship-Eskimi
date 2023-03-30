@@ -29,6 +29,17 @@ namespace Eskimi_InternshipTask
         //    return driver;
         //}
 
+
+        [Fact]
+        public void LoggingInForTheFirstTimeOnNewDevice()
+        {
+            var driver = Login();
+            driver.FindElement(By.Id("is-accepted")).Click();
+            driver.FindElement(By.XPath("//button[@type = 'submit']")).Click();
+            Assert.Equal("https://dsp.eskimi.com/admin?function=campaigns&method=index", driver.Url.ToString());
+            driver.Quit();
+        }
+
         [Fact]
         public void UpdatePersonalInfoScenario1Part1()
         {

@@ -17,6 +17,8 @@ namespace Eskimi_InternshipTask
             return driver;
         }
 
+        // The method below can be used in case an engineer wants to log in with his own credentials.
+
         //public IWebDriver Login(string userEmail, string userPassword) 
         //{
         //    var driver = new ChromeDriver();
